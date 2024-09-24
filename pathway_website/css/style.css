@@ -5,8 +5,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --secondary-color: #6c757d;
+  --secondary-hover-color: #545b62;
+  --text-color: #333;
+  --background-color: #f8f8f8;
+  --header-height: 60px;
+}
+
 body {
   font-family: 'Arial', sans-serif;
+  line-height: 1.6;
 }
 
 .header-container {
@@ -15,6 +26,13 @@ body {
   align-items: center;
   padding: 1em 2em;
   background-color: #f8f8f8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: var(--header-height);
 }
 
 .logo a {
@@ -33,95 +51,234 @@ body {
   padding: 0 1em;
 }
 
-.navigation li a {
+.navigation li a,
+.sign-in a {
   text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navigation li a {
+  color: var(--text-color);
 }
 
 .navigation li a:hover,
 .navigation li a:focus {
-  color: #007bff; /* Change color on hover or focus for better user experience */
+  color: var(--primary-color);
 }
 
 .sign-in a {
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: white;
   padding: 0.5em 1em;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 .sign-in a:hover,
 .sign-in a:focus {
-  background-color: #0056b3;
+  background-color: var(--primary-hover-color);
 }
 
 .hero {
-  background: url('/img/pathway_header.png') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/pathway_header.png') no-repeat center center;
   background-size: cover;
-        background-position: center;
-        height: 100vh;
-        color: white;
-        display: flex;
-        align-items: left;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        padding: 20px;
-        box-sizing: border-box;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0 2em;
+  box-sizing: border-box;
+  margin-top: var(--header-height);
 }
 
 .hero-content {
   max-width: 605px; /* Adjust as needed */
   width: 100%;
-  padding: 0 1em; /* To ensure padding on smaller screens */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
 
 .hero h1 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
-  text-align: left;
+  line-height: 1.2;
 }
 
 .subheading {
   font-size: 1.2em;
   margin-bottom: 2em;
-  text-align: left;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1em;
 }
 
 .hero-buttons .btn {
   text-decoration: none;
-  padding: 1em 2em;
-  margin: 0 0.5em;
+  padding: 0.8em 1.5em;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-hover-color);
 }
 
 .btn-secondary {
-  background-color: #6c757d;
+  background-color: var(--secondary-color);
   color: #fff;
 }
 
-.btn-secondary:hover {
-  background-color: #545b62;
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--secondary-hover-color);
 }
 
 @media (max-width: 768px) {
+  .header-container {
+    padding: 1em;
+  }
+
   .navigation ul {
     display: none; /* Hide navigation on small screens, could be toggled with JS */
   }
   /* You might want to add a hamburger icon and JS to toggle mobile navigation */
+  .hero {
+    padding: 0 1em;
+  }
+
+  .hero-content {
+    padding: 1.5em;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .subheading {
+    font-size: 1em;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+
+  .navigation {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 1em;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navigation.active {
+    transform: translateY(0);
+  }
+
+  .navigation ul {
+    flex-direction: column;
+  }
+
+  .navigation li {
+    padding: 0.5em 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.find-pathway {
+  display: flex;
+  flex-direction: column;
+  padding: 4em 2em;
+  background-color: #fff;
+}
+
+.find-pathway-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.find-pathway h2 {
+  font-size: 2.5em;
+  color: var(--text-color);
+  margin-bottom: 0.5em;
+}
+
+.find-pathway p {
+  font-size: 1em;
+  color: var(--text-color);
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.find-pathway-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.find-pathway-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .find-pathway {
+    padding: 2em 1em;
+  }
+
+  .find-pathway h2 {
+    font-size: 2em;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    margin: 0.5em 0;
+  }
 }
