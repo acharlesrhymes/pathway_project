@@ -119,27 +119,52 @@ body {
   border-radius: 5px;
   transition: all 0.3s ease;
   font-weight: bold;
+  background-color: #90EE90;
+  color: #000;
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
+.btn:hover,
+.btn:focus {
+  opacity: 0.9;
+}
+
+/* Remove specific button color styles */
+.btn-primary,
+.btn-secondary {
+  background-color: #90EE90;
   color: #000;
 }
 
 .btn-primary:hover,
-.btn-primary:focus {
-  background-color: var(--primary-hover-color);
+.btn-primary:focus,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #90EE90;
+  opacity: 0.9;
+}
+
+/* Update CTA section button styles */
+.cta-buttons .btn {
+  background-color: #90EE90;
   color: #000;
 }
 
-.btn-secondary {
-  background-color: var(--secondary-color);
-  color: #fff;
+.cta-buttons .btn:hover {
+  opacity: 0.9;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background-color: var(--secondary-hover-color);
+/* Update FAQ CTA button styles */
+.faq-cta .btn-primary,
+.faq-cta .btn-primary:hover,
+.faq-cta .btn-primary:focus {
+  background-color: #90EE90;
+  color: #000;
+}
+
+/* Update hiring section button styles */
+.hiring-section .btn {
+  background-color: #90EE90;
+  color: #000;
 }
 
 .hero-buttons,
@@ -267,56 +292,92 @@ body {
 
 /* Feature Highlight section styles */
 .feature-highlight {
-  padding: 4em 2em;
-  background-color: #ffffff;
+    padding: 4em 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
 }
 
 .feature-content {
-  max-width: 1200px;
-  margin: 0 auto;
+    text-align: left;
+    margin-bottom: 3em;
 }
 
-.feature-highlight h2 {
-  font-size: 2.5em;
-  color: var(--text-color);
-  margin-bottom: 0.5em;
+.section-title {
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
-.feature-highlight > p {
-  font-size: 1.1em;
-  color: var(--text-color);
-  margin-bottom: 2em;
-  max-width: 800px;
+.section-description {
+    font-size: 1.1em;
+    color: #333;
+    max-width: 800px;
+    line-height: 1.6;
 }
 
 .feature-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 2em;
-  margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin-bottom: 3em;
 }
 
 .feature-card {
-  flex: 1;
-  text-align: left;
+    flex: 1;
+    text-align: left;
 }
 
-.feature-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1em;
+.feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1em;
 }
 
-.feature-card h3 {
-  font-size: 1.2em;
-  color: var(--text-color);
-  margin-bottom: 0.5em;
+.feature-title {
+    font-size: 1.2em;
+    color: #000;
+    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
-.feature-card p {
-  font-size: 0.9em;
-  color: var(--secondary-color);
+.feature-description {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.btn {
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #87CEEB;
+    color: #000;
+}
+
+.btn-secondary {
+    background-color: #E0E0E0;
+    color: #000;
+}
+
+.btn .arrow {
+    margin-left: 0.5em;
 }
 
 /* Testimonials section styles */
@@ -542,6 +603,90 @@ body {
   color: #000;
 }
 
+/* Meet Our Team section styles */
+.meet-our-team {
+    padding: 4em 2em;
+    background-color: #ffffff;
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meet-our-team h2 {
+    font-size: 2.5em;
+    color: var(--text-color);
+    margin-bottom: 0.2em;
+}
+
+.meet-our-team .subtitle {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 2em;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+.team-member {
+    text-align: left;
+}
+
+.team-member-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.team-member h3 {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin-bottom: 0.2em;
+}
+
+.team-member .role {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    margin-bottom: 0.5em;
+}
+
+.team-member .description {
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.hiring-section {
+    background-color: #f8f8f8;
+    padding: 2em;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 2em;
+}
+
+.hiring-section h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 0.5em;
+}
+
+.hiring-section p {
+    font-size: 1em;
+    color: var(--secondary-color);
+    margin-bottom: 1em;
+}
+
+.hiring-section .btn {
+    display: inline-block;
+    background-color: #90EE90;
+    color: #000000;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .header-container {
@@ -653,5 +798,22 @@ body {
 
   .faq-question {
     font-size: 1.1em;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
   }
 }
