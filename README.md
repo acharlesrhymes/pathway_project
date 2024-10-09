@@ -2,7 +2,7 @@
 
 Welcome to the Pathway Project! This repository contains the source code for the Pathway Mental Health Services Website, a platform designed to connect individuals with professional counseling services and provide resources for mental wellness.
 
-## Project Overview
+# Project Overview
 
 The Pathway website is built with the mission to empower individuals on their journey to mental wellness. It serves as a comprehensive platform where users can learn about the services offered, meet the professional team, access mental health resources, and engage with helpful content such as videos and articles.
 
