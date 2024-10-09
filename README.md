@@ -14,7 +14,7 @@ The Pathway website is built with the mission to empower individuals on their jo
 
 - Team Introduction: Get to know the licensed mental health professionals and counselors.
 
-Testimonials: Hear from satisfied clients who have benefited from the services.
+_ Testimonials: Hear from satisfied clients who have benefited from the services.
 
 Resource Library: Watch videos on topics like meditation and guided practices for mental health.
 
@@ -24,7 +24,7 @@ Contact Options: Easy-to-access "Book" and "Contact" options to reach out to the
 
 Career Opportunities: Information on open positions for those interested in joining the team.
 
-Project Structure
+## Project Structure
 
 The repository is organized as follows:
 
