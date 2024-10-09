@@ -14,15 +14,15 @@ The Pathway website is built with the mission to empower individuals on their jo
 
 - Team Introduction: Get to know the licensed mental health professionals and counselors.
 
-_ Testimonials: Hear from satisfied clients who have benefited from the services.
+- Testimonials: Hear from satisfied clients who have benefited from the services.
 
-Resource Library: Watch videos on topics like meditation and guided practices for mental health.
+- Resource Library: Watch videos on topics like meditation and guided practices for mental health.
 
-FAQs: Frequently asked questions section to address common inquiries about therapy.
+- FAQs: Frequently asked questions section to address common inquiries about therapy.
 
-Contact Options: Easy-to-access "Book" and "Contact" options to reach out to the team.
+- Contact Options: Easy-to-access "Book" and "Contact" options to reach out to the team.
 
-Career Opportunities: Information on open positions for those interested in joining the team.
+- Career Opportunities: Information on open positions for those interested in joining the team.
 
 ## Project Structure
 
