@@ -8,11 +8,11 @@ The Pathway website is built with the mission to empower individuals on their jo
 
 # Features
 
-. Responsive Design: Optimized for both desktop and mobile views, ensuring accessibility and usability on all devices.
+- Responsive Design: Optimized for both desktop and mobile views, ensuring accessibility and usability on all devices.
 
-. Service Offerings: Detailed information about counseling services, including personalized and confidential care.
+- Service Offerings: Detailed information about counseling services, including personalized and confidential care.
 
-Team Introduction: Get to know the licensed mental health professionals and counselors.
+- Team Introduction: Get to know the licensed mental health professionals and counselors.
 
 Testimonials: Hear from satisfied clients who have benefited from the services.
 
