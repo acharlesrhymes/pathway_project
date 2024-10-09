@@ -43,15 +43,15 @@ styles/main.css: Stylesheet for the project, containing CSS rules for layout and
 
 scripts/main.js: JavaScript file handling the functionality and interactions on the website.
 
-Technologies Used
+## Technologies Used
 
-HTML: Structure and content of the web pages.
+- HTML: Structure and content of the web pages.
 
-CSS: Styling and layout for the user interface.
+- CSS: Styling and layout for the user interface.
 
-JavaScript: Interactive elements and dynamic content rendering.
+- JavaScript: Interactive elements and dynamic content rendering.
 
-Setup and Installation
+## Setup and Installation
 
 1. Clone the Repository:
 
@@ -63,10 +63,10 @@ cd pathway_project/pathway_website
 
 3. Open the index.html File: Open index.html in your preferred web browser to view the site locally.
 
-Contributing
+## Contributing
 
 We welcome contributions to improve the website and add new features! Please submit a pull request or open an issue if you have suggestions or bug reports.
 
-License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
