@@ -37,11 +37,11 @@ pathway_project/
 │       └── main.js
 └── README.md
 
-index.html: Main HTML file for the Pathway website.
+- index.html: Main HTML file for the Pathway website.
 
-styles/main.css: Stylesheet for the project, containing CSS rules for layout and design.
+- styles/main.css: Stylesheet for the project, containing CSS rules for layout and design.
 
-scripts/main.js: JavaScript file handling the functionality and interactions on the website.
+- scripts/main.js: JavaScript file handling the functionality and interactions on the website.
 
 ## Technologies Used
 
